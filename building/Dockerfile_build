@@ -7,4 +7,4 @@ WORKDIR /home/ubuntu/boxfuse-sample-java-war-hello
 RUN mvn package
 WORKDIR /home/ubuntu/boxfuse-sample-java-war-hello/target
 ENTRYPOINT ["java","jar","hello-1.0.war"]
-
+CMD ["mvn"]
