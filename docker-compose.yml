@@ -4,7 +4,8 @@ services:
     build:
       context: ./building
       dockerfile: Dockerfile_build
-      volumes: ./:/home/ubuntu/boxfuse-sample-java-war-hello/target
+      volumes:
+        - ./:/home/ubuntu/boxfuse-sample-java-war-hello/target
 
   prod:
     build:
@@ -12,6 +13,7 @@ services:
       dockerfile: Dockerfile_prod
       ports:
         - "8080:8080"
-      volumes: ./:/usr/local/tomcat/webapps
+      volumes:
+        - ./:/usr/local/tomcat/webapps
 
 
