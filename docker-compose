@@ -8,5 +8,7 @@ services:
     build:
       context: production
       dockerfile: Dockerfile_prod
+      ports:
+        - "8080:8080"
 
 
