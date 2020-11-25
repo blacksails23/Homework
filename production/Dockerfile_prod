@@ -1,1 +1,2 @@
 FROM tomcat:latest
+COPY /root/.m2/repository/com/boxfuse/samples/hello/1.0/hello-1.0.war /usr/local/tomcat/webapps
