@@ -3,6 +3,5 @@ RUN apt-get update
 RUN apt-get install -y git maven default-jdk
 WORKDIR /home/ubuntu
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-ADD mvn.sh /home/ubuntu/mvn.sh
-RUN chmod +x mvn.sh
-ENTRYPOINT ["/home/ubuntu/mvn.sh"]
+WORKDIR /home/ubuntu/boxfuse-sample-java-war-hello
+CMD ["mvn package"]
