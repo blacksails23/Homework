@@ -5,7 +5,7 @@ services:
       context: ./building
       dockerfile: Dockerfile_build
     volumes:
-       - ./:/project/boxfuse/sample-java-war-hello
+       - ./:/project/sample-java-war-hello
 
   prod:
     build:
