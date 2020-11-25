@@ -3,4 +3,5 @@ RUN apt-get update
 RUN apt-get install -y git maven default-jdk
 WORKDIR /home/ubuntu
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-CMD mvn package /home/ubuntu/boxfuse-sample-java-war-hello/pom.xml
+WORKDIR /home/ubuntu/boxfuse-sample-java-war-hello
+CMD mvn package
