@@ -4,4 +4,4 @@ RUN apt-get install -y git maven default-jdk
 WORKDIR /home/ubuntu
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /home/ubuntu/boxfuse-sample-java-war-hello
-CMD ["mvn package", "mvn package /home/ubuntu/boxfuse-sample-java-war-hello"]
+CMD ["mvn package /home/ubuntu/boxfuse-sample-java-war-hello"]
