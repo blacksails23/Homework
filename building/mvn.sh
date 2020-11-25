@@ -1,2 +1,2 @@
 #!/bin/bash
-mvn package package/boxfuse-sample-java-war-hello/
+mvn package project/boxfuse-sample-java-war-hello/
