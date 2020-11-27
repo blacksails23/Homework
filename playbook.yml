@@ -1,7 +1,8 @@
 ---
 - name: install maven_git_default-jdk
   hosts: build
-  become: true
+  become: yes
+
   tasks:
     apt:
       name: "{{ packages }}"
@@ -14,7 +15,8 @@
 
 - name: upload from git
   hosts: build
-  become: true
+  become: yes
+
   tasks:
     git:
       repo: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello.git'
@@ -22,7 +24,8 @@
 
 - name: build war
   hosts: build
-  become: true
+  become: yes
+
   tasks:
     shell:
       mvn package
