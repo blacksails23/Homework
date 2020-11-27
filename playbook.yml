@@ -1,8 +1,9 @@
 ---
-- name: install maven git default-jdk
+- name: build process
   hosts: build
   become: yes
   tasks:
+  - name: install maven git default-jdk
     apt:
       update_cache: yes
       pkg:
