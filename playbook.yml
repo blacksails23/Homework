@@ -24,8 +24,8 @@
 
   - name: replace war file
     fetch:
-      src: /home/black1/Homework
-      dest: /home/ubuntu/target
+      src: /home/ubuntu/target
+      dest: /home/black1/Homework
 
 
 - name: prod process
