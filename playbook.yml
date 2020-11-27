@@ -24,7 +24,7 @@
 
   - name: replace war file
     fetch:
-      src: /home/ubuntu/target
+      src: /home/ubuntu/target/hello-1.0.war
       dest: /home/black1/Homework
 
 
