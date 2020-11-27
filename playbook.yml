@@ -36,3 +36,7 @@
     apt:
        update_cache: yes
        name: tomcat9
+  - name: copy war file
+    copy:
+        src: /home/black1/Homework/178.154.231.164/home/ubuntu/target/hello-1.0.war
+        dest: /var/lib/tomcat9/webapps
