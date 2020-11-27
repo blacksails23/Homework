@@ -11,18 +11,12 @@
       - git
       - default-jdk
 
-- name: upload from git
-  hosts: build
-  become: yes
-  tasks:
+  - name: upload from git project
     git:
       repo: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello.git'
       dest: /home/ubuntu
 
-- name: build war
-  hosts: build
-  become: yes
-  tasks:
+  - name: build project
     shell:
       mvn package
     args:
