@@ -5,12 +5,11 @@
 
   tasks:
     apt:
-     name: "{{ packages }}"
-     update_cache: yes
-    with_items:
-      - "maven"
-      - "git"
-      - "default-jdk"
+      update_cache: yes
+    pkg:
+    - maven
+    - git
+    - default-jdk
 
 - name: upload from git
   hosts: build
