@@ -5,8 +5,8 @@
 
   tasks:
     apt:
-      name: "{{ packages }}"
-      update_cache: yes
+     name: "{{ packages }}"
+     update_cache: yes
     vars:
       packages:
       - maven
