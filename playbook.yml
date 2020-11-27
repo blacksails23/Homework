@@ -1,5 +1,5 @@
 ---
-- name: install maven_git_default-jdk
+- name: install maven git default-jdk
   hosts: build
   become: yes
 
