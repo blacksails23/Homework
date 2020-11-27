@@ -1,0 +1,30 @@
+---
+- name: install maven_git_default-jdk
+  hosts: build
+  become: true
+  tasks:
+    apt:
+      name: "{{ packages }}"
+      update_cache: yes
+    vars:
+      packages:
+      - maven
+      - git
+      - default-jdk
+
+- name: upload from git
+  hosts: build
+  become: true
+  tasks:
+    git:
+      repo: 'https://github.com/boxfuse/boxfuse-sample-java-war-hello.git'
+      dest: /home/ubuntu
+
+- name: build war
+  hosts: build
+  become: true
+  tasks:
+    shell:
+      mvn package
+    args:
+      chdir: /home/ubuntu/boxfuse-sample-java-war-hello
