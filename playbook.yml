@@ -21,3 +21,18 @@
       mvn package
     args:
       chdir: /home/ubuntu
+
+  - name: replace war file
+    fetch:
+      src: /home/black1/Homework
+      dest: /home/ubuntu/target
+
+
+- name: prod process
+  hosts: prod
+  become: yes
+  tasks:
+  - name: install tomcat
+    apt:
+       update_cache: yes
+       name: tomcat
