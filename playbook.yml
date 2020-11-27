@@ -1,3 +1,4 @@
+---
 - name: install maven_git_default-jdk
   hosts: build
   become: true
