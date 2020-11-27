@@ -8,10 +8,10 @@
      name: "{{ packages }}"
      update_cache: yes
     vars:
-      packages:
-      - maven
-      - git
-      - default-jdk
+     packages:
+     - maven
+     - git
+     - default-jdk
 
 - name: upload from git
   hosts: build
