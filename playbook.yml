@@ -35,4 +35,4 @@
   - name: install tomcat
     apt:
        update_cache: yes
-       name: tomcat
+       name: tomcat9
