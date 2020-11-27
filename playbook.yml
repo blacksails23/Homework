@@ -20,4 +20,4 @@
     shell:
       mvn package
     args:
-      chdir: /home/ubuntu/boxfuse-sample-java-war-hello
+      chdir: /home/ubuntu
